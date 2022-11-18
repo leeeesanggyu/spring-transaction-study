@@ -33,6 +33,7 @@ public class MemberService {
      * Member 와 Log 를 각각 저장하는 로직
      * Log 저장 중 예외발생시 복구
      */
+    @Transactional
     public void joinV2(String userName) {
         Member member = new Member(userName);
         log.info("=== MemberRepository call start ===");
